@@ -1,0 +1,16 @@
+3
+
+Type inference is where the compiler works out the type on your behalf:
+
+const a = 'Some value';
+The variable a has an inferred type of string.
+
+A type annotation is where you explicitly state the type:
+
+const a: string = 'Some value';
+You have specifically indicated that this should be a string with a type annotation (typically in the format : type).
+
+The practical difference is that where types can be inferred, you save a great deal of typing without losing the benefits. In some cases, being explicit can be beneficial:
+
+When creating an object with a literal value - as it catches mis-typed members
+Function signatures - as parameter types are tricky to infer and return types will end up as a union of types found in return statements, so you might not realise you are returning different types in different cases
